@@ -1,5 +1,6 @@
 import React from 'react';
 import classes from './card.module.scss';
+import Star from '../icons/star';
 
 const Card = () => {
     return (
@@ -9,11 +10,13 @@ const Card = () => {
                 <p>TRUFFLE MINI POPCORN</p>
                 <p>4-PACK | $18</p>
                 <div className={classes["reviews"]}>
-                    <img width="20px" src="/star.png"/>
-                    <img width="20px" src="/star.png"/>
-                    <img width="20px" src="/star.png"/>
-                    <img width="20px" src="/star.png"/>
-                    <img width="20px" src="/star.png"/>
+                    <div className={classes["stars-cont"]}>
+                        <Star />
+                        <Star />
+                        <Star />
+                        <Star />
+                        <Star />
+                    </div>
                     <p className={classes["reviews-title"]}>298 Reviews</p>
                 </div>
                 <button className={classes["add-btn"]}>ADD TO CARD</button>

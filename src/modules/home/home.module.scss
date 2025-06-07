@@ -17,21 +17,25 @@
 }
 
 .fan-fav-part {
-    padding-top: 40px;
-    padding-left: 24px;
-    padding-right: 24px;
-    padding-bottom: 100px;
-    background-color: #f8f4e4;
-    display: flex;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
     gap: 24px;
+    padding: 40px 24px 100px;
+    background-color: #f8f4e4;
+}
+
+@media (max-width: 1200px){
+    .cart-cont {
+        margin-bottom: 70px !important;
+    }
 }
 
 .fanFav-text {
-    font-size: 31px;
+    font-size: 35px;
     font-weight: 600;
     text-align: center;
     padding-top: 40px;
-    padding-bottom: 40px;
+    padding-bottom: 50px;
 }
 
 .fan-fav-cont {
@@ -41,6 +45,7 @@
 }
 
 
+
 //go to packet choose
 
 .pack-choose {
@@ -48,8 +53,8 @@
     padding-left: 24px;
     padding-right: 24px;
     margin: auto;
-    display: grid;
-    grid-template-columns: 80% 20%;
+    display: flex;
+    justify-content: center;
     padding-bottom: 100px;
 }
 
@@ -58,25 +63,298 @@
     transform: scale(1.03);
     transition: transform 0.3s ease;
 }
-.pack-choose p:nth-child(1) {
+
+.pack-choose-1 {
     background-color: #b69775;
     font-size: 27px;
     font-weight: 600;
     padding-left: 28px;
+    padding-right: 28px;
     padding-top: 25px;
     padding-bottom: 25px;
+    width: 80%;
     border-top-left-radius: 5px;
     border-bottom-left-radius: 5px;
 }
 
-.pack-choose p:nth-child(2) {
+.pack-choose-2 {
     background-color: #f97316;
     font-size: 28px;
     color: white;
+    width: 20%;
     font-weight: 600;
     display: flex;
     justify-content: center;
     align-items: center;
     border-top-right-radius: 5px;
     border-bottom-right-radius: 5px;
+    padding-left: 30px;
+    padding-right: 30px;
+}
+
+.cart-appearance {
+    display: none;
+}
+
+@media (max-width: 1320px) {
+    .pack-choose-2 {
+        font-size: 24px !important;
+    }
+
+    .pack-choose-1 {
+        font-size: 24px !important;
+    }
+}
+
+@media (max-width: 990px) {
+    .pack-choose {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+    }
+
+    .pack-choose-2 {
+        font-size: 10px !important;
+        width: 100% !important;
+        border: none !important;
+        border-top-right-radius: none !important;
+        border-bottom-right-radius: none !important;
+        padding-left: 10px;
+        padding-right: 10px;
+        padding-top: 15px;
+        padding-bottom: 15px;
+    }
+
+
+    .pack-choose-1 {
+        font-size: 10px !important;
+        width: 100% !important;
+        text-align: center;
+        padding-left: 10px;
+        padding-right: 10px;
+        padding-top: 15px;
+        padding-bottom: 15px;
+    }
+}
+
+.home-layer-wrapper {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+}
+
+.home-layer-part {
+    flex: 1 1 calc(50% - 20px);
+    max-width: calc(50% - 20px);
+}
+
+@media (max-width: 768px) {
+    .home-layer-part {
+        flex: 1 1 100%;
+        max-width: 100%;
+    }
+}
+
+.flex-item {
+    flex: 1 1 45%;
+    /* shrink, grow, base width */
+    min-width: 300px;
+}
+
+.flex-item:nth-child(3) {
+    flex-basis: 100%;
+}
+
+.home-layer-part {
+    flex: 1 1 45%;
+    min-width: 300px;
+    cursor: pointer;
+}
+
+.home-layer-cont {
+    position: relative;
+    width: 100%;
+    max-height: 60vh;
+    height: 100%;
+    overflow: hidden;
+}
+
+.home-layer-img1 {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.3s ease;
+}
+
+.home-layer-cont:hover .home-layer-img1 {
+    transform: scale(1.05);
+}
+
+.home-layer-img2 {
+    width: 250px;
+    position: absolute;
+    right: 20px;
+    bottom: 20px;
+    transition: transform 0.3s ease;
+}
+
+.home-layer-cont:hover .home-layer-img2 {
+    transform: scale(0.95);
+}
+
+.video-part {
+    background-image: url("/pip_corn_field.webp");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    width: 100%;
+    height: 100vh;
+    margin-top: 60px;
+    margin-bottom: 60px;
+    display: flex;
+    flex-direction: column;
+}
+
+.glass-container {
+    height: 100%;
+    display: flex;
+    align-items: center;
+    padding-right: 20px;
+}
+
+.tilt-text {
+    text-align: center;
+    font-size: 25px;
+    border-radius: 16px;
+    color: white;
+    font-weight: 600;
+    font-style: italic;
+    padding: 20px;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    background: #9b9b2a;
+    background: linear-gradient(90deg, rgba(155, 155, 42, 1) 0%, rgba(87, 199, 133, 1) 90%, rgba(237, 221, 83, 1) 100%);
+}
+
+
+.typewriter {
+    overflow: hidden;
+    border-right: .15em solid orange;
+    white-space: nowrap;
+    margin: 0 auto;
+    letter-spacing: .15em;
+    animation:
+        typing 3.5s steps(40, end),
+        blink-caret .75s step-end infinite;
+}
+
+@keyframes typing {
+    from {
+        width: 0
+    }
+
+    to {
+        width: 100%
+    }
+}
+
+@keyframes blink-caret {
+
+    from,
+    to {
+        border-color: transparent
+    }
+
+    50% {
+        border-color: orange;
+    }
+}
+
+.goToProcess-wrapper:hover {
+    transform: scale(1.05);
+}
+
+
+.goToProcess-cont {
+    display: flex;
+}
+
+.goToProcess-wrapper {
+    margin: auto;
+    background-color: #b69775;
+    width: max-content;
+    border-radius: 9px;
+    transition: transform 0.3s ease;
+    position: relative;
+
+    p {
+        font-size: 27px;
+        font-weight: 600;
+        text-align: center;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding-left: 30px;
+        padding-right: 30px;
+    }
+}
+
+.goToProcess-image {
+    border-radius: 9px;
+}
+
+
+.small-screen-text {
+    display: none;
+}
+
+@media (max-width: 1086px) {
+    .goToProcess-image {
+        display: none;
+    }
+
+    .small-screen-text {
+        display: block;
+        background-color: #3eadb8;
+        color: white;
+        font-size: 20px;
+        font-weight: 600;
+        width: 40%;
+        text-align: center;
+        padding: 10px 0;
+        border-radius: 7px;
+        position: absolute;
+        bottom: -20px;
+        left: 50%;
+        transform: translateX(-50%);
+    }
+
+    .goToProcess-cont {
+        justify-content: center;
+        width: 100%;
+
+        p {
+            width: 90vw;
+            padding: 30px 0;
+            text-align: center;
+            box-sizing: border-box;
+        }
+    }
+
+    .tilt-text {
+        font-size: 18px;
+    }
+}
+
+@media (max-width: 800px) {
+    .tilt-text {
+        font-size: 15px !important;
+    }
+}
+
+@media (max-width: 600px) {
+    .tilt-text {
+        font-size: 10px !important;
+    }
 }

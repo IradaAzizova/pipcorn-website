@@ -1,0 +1,45 @@
+.facebook {
+    transition: 0.5s ease;
+    color: rgb(149, 50, 0);
+}
+
+.facebook:hover {
+    color: rgb(24, 119, 242);
+    transform: scale(1.2);
+}
+
+.instagram {
+    transition: 0.5s ease;
+    color: rgb(149, 50, 0);
+}
+
+.instagram:hover {
+    color: rgb(150, 47, 191);
+    transform: scale(1.2);
+}
+
+.pinterest {
+    transition: 0.5s ease;
+    color: rgb(149, 50, 0);
+}
+
+.pinterest:hover {
+    color: #E60023;
+    transform: scale(1.2);
+}
+
+.twitter {
+    transition: 0.5s ease;
+    color: rgb(149, 50, 0);
+}
+
+.twitter:hover {
+    color: #1DA1F2;
+    transform: scale(1.2);
+}
+
+.cart{
+    margin-left: 10px;
+    font-size: 17px;
+    color:aquamarine;
+}

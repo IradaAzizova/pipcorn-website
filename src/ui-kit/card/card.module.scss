@@ -12,6 +12,10 @@
     overflow: visible;
 }
 
+.card-cont:hover {
+    background-color: rgba(255, 255, 255, 0.2);
+}
+
 .image-cont {
     display: flex;
     justify-content: center;
@@ -62,6 +66,10 @@
     margin-bottom: 0.8rem;
 }
 
+.stars-cont {
+    display: flex;
+}
+
 .reviews-title {
     color: rgb(51 125 156);
     font-weight: 600;
@@ -80,8 +88,23 @@
     border: none;
     margin: auto;
     margin-bottom: 0.8rem;
+    transition: all 0.3s ease-in-out;
+    cursor: pointer;
+    border: 1px solid #3eadb8;
+}
+
+.add-btn:hover {
+    color: #3eadb8;
+    background-color: white;
 }
 
 .view-btn {
     background-color: #b69775;
+    border: 1px solid #b69775;
+}
+
+.view-btn:hover {
+    color: #b69775;
+    background-color: white;
+    border: 1px solid #b69775;
 }
